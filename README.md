@@ -1,5 +1,3 @@
-# yankes
-Pelayanan Kesehatan Masyarakat Provinsi Banten
 # APLIKASI DAN PERANCANGAN SISTEM INFORMASI PELAYANAN KESEHATAN PROVINSI BANTEN BERBASIS WEB
 
 ## ABSTRAK
@@ -141,10 +139,19 @@ Solusi yang kami tawarkan adalah pembuatan sebuah sistem informasi manajemen yan
 ### 3.5 Perancangan Database
 pada database yang digunakan oleh single user atau hanya beberapa user saja, perancangan database tidak sulit. tetapi jika ukuran database yang sedang atau besar ( 25 - ratusan user yang berisikan jutaan bytes informasi dan melibatkan ratusan query dan program program aplikasi) perancangan database menjadi sangat komplek. Oleh karena itu para pemakai mengharapkan penggunaan database yang sedemikian rupa sehingga sistem harus dapat memenuhi kebutuhan-kebutuhan seluruh user tersebut.
 
-Tujuan perancangan database:
+#### 3.5.1 Tujuan perancangan database:
 * Untuk memenuhi informasi yang diberisikan kebutuhan-kebutuhan user secara khusus dan aplikasi-aplikasinya.
 * Memudahkan pengertian struktur informasi
-* mendukung kebutuhan-kebutuhan pemrosesan dan beberapa obyek penampilan (response time, processing time dan storage space)
+* Mendukung kebutuhan-kebutuhan pemrosesan dan beberapa obyek penampilan (*response time, processing time dan storage space*)
+
+#### 3.5.2 Proses Perancangan Database
+proses perancangan database terdiri dari 6 tahap:
+* Tahap 1, Pengumpulan data dan analisis
+* Tahap 2, Perancangan database secara konseptual
+* tahap 3, Pemilihan DBMS
+* Tahap 4, Perancangan Database secara logika (*data model mapping*)
+* Tahap 5, Perancangan database secara fisik
+* Tahap 6, Implementasi sistem database
 
 semakin banyak permintaan kepada aplikasi dapat mempengaruhi data yg terdapat di database. Contoh relasi permintaan aplikasi dengan status dan log
  [![relasi permintaan aplikasi dengan status dan log](http://sop.developer-banten.net/images/sop/rancangan-database.jpg)](http://sop.developer-banten.net/images/sop/rancangan-database.jpg)
@@ -156,57 +163,57 @@ Permodelan rancangan sistem yang dgunakan adalah UML (Unified Modeling Language)
 #### 3.6.1 Use Case Diagram
 
 * **Use Case Diagram Admin**
-[![Use Case Diagram Admin](http://sop.developer-banten.net/images/rumah-sakit/use-case-diagram/20171002_use-case-admin)](http://sop.developer-banten.net/images/rumah-sakit/use-case-diagram/20171002_use-case-admin)
+[![Use Case Diagram Admin](http://sop.developer-banten.net/images/rumah-sakit/use-case-diagram/20171014_use-case-diagram-admin.png)](http://sop.developer-banten.net/images/rumah-sakit/use-case-diagram/20171014_use-case-diagram-admin.png)
 
 * **Use Case Diagram Dokter**
-[![Use Case Diagram Dokter](http://sop.developer-banten.net/images/rumah-sakit/use-case-diagram/20171002_use-case-dokter)](http://sop.developer-banten.net/images/rumah-sakit/use-case-diagram/20171002_use-case-dokter)
+[![Use Case Diagram Dokter](http://sop.developer-banten.net/images/rumah-sakit/use-case-diagram/20171014_use-case-diagram-dokter.png)](http://sop.developer-banten.net/images/rumah-sakit/use-case-diagram/20171014_use-case-diagram-dokter.png)
 
 * **Use Case Diagram Pasien**
-[![Use Case Diagram Pasien](http://sop.developer-banten.net/images/rumah-sakit/use-case-diagram/20171002_use-case-pasien)](http://sop.developer-banten.net/images/rumah-sakit/use-case-diagram/20171002_use-case-pasien)
+[![Use Case Diagram Pasien](http://sop.developer-banten.net/images/rumah-sakit/use-case-diagram/20171014_use-case-diagram-pasien.png)](http://sop.developer-banten.net/images/rumah-sakit/use-case-diagram/20171014_use-case-diagram-pasien.png)
 
 #### 3.6.2 Activty Diagram
 
 * **Activity Diagram Registrasi User**
-[![Activity Diagram Registrasi User](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171003_activity-diagram-registrasi-user)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171003_activity-diagram-registrasi-user)
+[![Activity Diagram Registrasi User](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-registrasi.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-registrasi.png)
 
 * **Activity Diagram Login Admin**
-[![Activity Diagram Login Admin](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171005_activity-diagram-login-admin)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171005_activity-diagram-login-admin)
+[![Activity Diagram Login Admin](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-login-admin.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-login-admin.png)
 
 * **Activity Diagram Login Dokter**
-[![Activity Diagram Login Dokter](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171005_activity-diagram-login-dokter)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171005_activity-diagram-login-dokter)
+[![Activity Diagram Login Dokter](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-login-dokter.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-login-dokter.png)
 
 * **Activity Diagram Login Pasien**
-[![Activity Diagram Login Pasien](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171005_activity-diagram-login-pasien)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171005_activity-diagram-login-pasien)
+[![Activity Diagram Login Pasien](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-login-pasien.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-login-pasien.png)
 
 * **Activity Diagram Input Rumah Sakit**
-[![Activity Diagram Input Rumah Sakit](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171013_activity-diagram-info-rumah-sakit)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171013_activity-diagram-info-rumah-sakit)
+[![Activity Diagram Input Rumah Sakit](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-input-rumah-sakit.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-input-rumah-sakit.png)
 
 * **Activity Diagram Input Ruang Rawat**
-[![Activity Diagram Input Ruang Rawat](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171013_activity-diagram-input-ruang-rawat)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171013_activity-diagram-input-ruang-rawat)
+[![Activity Diagram Input Ruang Rawat](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-input-ruang-rawat.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-input-ruang-rawat.png)
 
 * **Activity Diagram Input Dokter**
-[![Activity Diagram Input Dokter](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171009_activity-diagram-input-dokter)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171009_activity-diagram-input-dokter)
+[![Activity Diagram Input Dokter](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-input-dokter.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-input-dokter.png)
 
 * **Activity Diagram Input Obat**
-[![Activity Diagram Input Obat](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171013_activity-diagram-input-obat)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171013_activity-diagram-input-obat)
+[![Activity Diagram Input Obat](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-input-obat.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-input-obat.png)
 
 * **Activity Diagram Lihat Info Rumah Sakit**
-[![Activity Diagram Lihat Info Rumah Sakit](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171004_activity-diagram-lihat-info-rumah-sakit)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171004_activity-diagram-lihat-info-rumah-sakit)
+[![Activity Diagram Lihat Info Rumah Sakit](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-lihat-info-rumah-sakit.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-lihat-info-rumah-sakit.png)
 
 * **Activity Diagram Lihat Info Ruang Rawat**
-[![Activity Diagram Lihat Info Ruang Rawat](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171004_activity-diagram-lihat-info-ruang-rawat)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171004_activity-diagram-lihat-info-ruang-rawat)
+[![Activity Diagram Lihat Info Ruang Rawat](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-lihat-info-ruang-rawat.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-lihat-info-ruang-rawat.png)
 
 * **Activity Diagram lihat Info Dokter**
-[![Activity Diagram lihat Info Dokter](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171009_activity-diagram-lihat-info-dokter)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171009_activity-diagram-lihat-info-dokter)
+[![Activity Diagram lihat Info Dokter](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-lihat-info-dokter.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-lihat-info-dokter.png)
 
 * **Activity Diagram Lihat Info Obat**
-[![Activity Diagram Lihat Info Obat](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171004_activity-diagram-lihat-info-obat)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171004_activity-diagram-lihat-info-obat)
+[![Activity Diagram Lihat Info Obat](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-lihat-info-obat.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-lihat-info-obat.png)
 
 * **Activity Diagram Konsultasi Pasien**
-[![Activity Diagram Konsultasi Pasien](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171010_activity-diagram-konsultasi-pasien)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171010_activity-diagram-konsultasi-pasien)
+[![Activity Diagram Konsultasi Pasien](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-konsultasi-pasien.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-konsultasi-pasien.png)
 
 * **Activity Diagram Konsultasi Dokter**
-[![Activity Diagram Konsultasi Dokter](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171004_activity-diagram-konsultasi-dokter)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171004_activity-diagram-konsultasi-dokter)
+[![Activity Diagram Konsultasi Dokter](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-konsultasi-dokter.png)](http://sop.developer-banten.net/images/rumah-sakit/activity-diagram/20171014_activity-diagram-konsultasi-dokter.png)
 
 #### 3.6.3 Sequence Diagram
 
@@ -252,4 +259,82 @@ Permodelan rancangan sistem yang dgunakan adalah UML (Unified Modeling Language)
 * **Sequence Diagram Lihat Info Obat**
 [![Sequence Diagram Lihat Info Obat](http://sop.developer-banten.net/images/rumah-sakit/sequence-diagram/20171003_sequence-diagram-lihat-info-obat)](http://sop.developer-banten.net/images/rumah-sakit/sequence-diagram/20171003_sequence-diagram-lihat-info-obat)
 
-* **State Chart Diagram 
+#### 3.6.4 State Chart Diagram
+* **State Chart Diagram Registrasi Dokter dan Pasien**
+[![State Chart Diagram Registrasi Dokter dan Pasien](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-registrasi.png)](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-registrasi.png)
+
+* **State Chart Diagram Login Admin**
+[![State Chart Diagram Login Admin](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-login-admin.png)](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-login-admin.png)
+
+* **State Chart Diagram Login Dokter dan Pasien**
+[![State Chart Diagram Login Dokter dan Pasien](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-login-pasien-dan-dokter.png)](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-login-pasien-dan-dokter.png)
+
+* **State Chart Diagram Input Rumah Sakit**
+[![State Chart Diagram Input Rumah Sakit](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-input-rumah-sakit.png)](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-input-rumah-sakit.png)
+
+* **State Chart Diagram Input Ruang Rawat**
+[![State Chart Diagram Input Ruang Rawat](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-input-ruang-rawat.png)](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-input-ruang-rawat.png)
+
+* **State Chart Diagram Input Dokter**
+[![State Chart Diagram Input Dokter](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-input-dokter.png)](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-input-dokter.png)
+
+* **State Chart Diagram Input Obat**
+[![State Chart Diagram Input Obat](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-input-obat.png)](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-input-obat.png)
+
+* **State Chart Diagram Lihat Info Rumah Sakit**
+[![State Chart Diagram Lihat Info Rumah Sakit](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-lihat-info-rumah-sakit.png)](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-lihat-info-rumah-sakit.png)
+
+* **State Chart Diagram Lihat Info Ruang Rawat**
+[![State Chart Diagram Lihat Info Ruang Rawat](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-lihat-info-ruang-rawat.png)](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-lihat-info-ruang-rawat.png)
+
+* **State Chart Diagram Lihat Info Dokter**
+[![State Chart Diagram Lihat Info Dokter](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-lihat-info-dokter.png)](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-lihat-info-dokter.png)
+
+* **State Chart Diagram Lihat Info Obat**
+[![State Chart Diagram Lihat Info Obat](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-lihat-info-obat.png)](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-lihat-info-obat.png)
+
+* **State Chart Diagram Konsultasi**
+[![State Chart Diagram Konsultasi](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-konsultasi.png)](http://sop.developer-banten.net/images/rumah-sakit/state-chart-diagram/20171014_state-chart-diagram-konsultasi.png)
+
+#### 3.6.5 Class Diagram
+[![Class Diagram](http://sop.developer-banten.net/images/rumah-sakit/dokumentasi/20171005_class-diagram-rumah-sakit.jpg)](http://sop.developer-banten.net/images/rumah-sakit/dokumentasi/20171005_class-diagram-rumah-sakit.jpg)
+
+#### 3.6.6 Deployment Diagram
+[![Deployment Diagram](http://sop.developer-banten.net/images/rumah-sakit/20171013_deployment-diagram.png)](http://sop.developer-banten.net/images/rumah-sakit/20171013_deployment-diagram.png)
+
+#### 3.6.7 Technology Stack Diagram
+[![Technology Stack Diagram](http://sop.developer-banten.net/images/rumah-sakit/dokumentasi/20171013_technology-stack-diagram.png)](http://sop.developer-banten.net/images/rumah-sakit/dokumentasi/20171013_technology-stack-diagram.png)
+
+#### 3.6.8 Desain Tampilan
+* **Layout Tampilan Registrasi**
+[![Layout Tampilan Registrasi](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-registrasi.png)](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-registrasi.png)
+
+* **Layout Tampilan Login**
+[![Layout Tampilan Login](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-login.png)](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-login.png)
+
+* **Layout Tampilan Input Rumah Sakit**
+[![Layout Tampilan Input Rumah Sakit](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171005_layout-tampilan-input-rumah-sakit.jpg)](sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171005_layout-tampilan-input-rumah-sakit.jpg)
+
+* **Layout Tampilan Input Ruang Rawat**
+[![Layout Tampilan Input Ruang Rawat](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171005_layout-input-ruang-rawat.jpg)](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171005_layout-input-ruang-rawat.jpg)
+
+* **Layout Tampilan Input Dokter**
+[![Layout Tampilan Input Dokter](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-input-dokter.png)](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-input-dokter.png)
+
+* **Layout Tampilan Input Obat**
+[![Layout Tampilan Input Obat](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-input-obat.png)](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-input-obat.png)
+
+* **Layout Tampilan Lihat Info Rumah Sakit**
+[![Layout Tampilan Lihat Info Rumah Sakit](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171005_layout-lihat-info-rumah-sakit.jpg)](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171005_layout-lihat-info-rumah-sakit.jpg)
+
+* **Layout Tampilan Lihat Info Ruang Rawat**
+[![Layout Tampilan Lihat Info Ruang Rawat](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171005_layout-lihat-info-ruang-rawat.jpg)](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171005_layout-lihat-info-ruang-rawat.jpg)
+
+* **Layout Tampilan Lihat Info Dokter**
+[![Layout Tampilan Lihat Info Dokter](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-lihat-info-dokter.png)](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-lihat-info-dokter.png)
+
+* **Layout Tampilan Lihat Info Obat**
+[![Layout Tampilan Lihat Info Obat](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-lihat-info-obat.png)](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-lihat-info-obat.png)
+
+* **Layout Tampilan Lihat Konsultasi**
+[![Layout Tampilan Lihat Konsultasi](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-konsultasi.png)](http://sop.developer-banten.net/images/rumah-sakit/design-tampilan/20171013_layout-tampilan-konsultasi.png)
